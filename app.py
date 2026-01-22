@@ -24,19 +24,4 @@ def upload_file():
 
 if __name__ == "__main__":
     app.run()
-```
 
-#### **templates/index.html**
-The form must use `enctype="multipart/form-data"` to handle files.
-```html
-<form action="/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="submit" value="Upload">
-</form>
-```
-
-#### **requirements.txt**
-Include `gunicorn` (needed for production hosting).
-```text
-flask
-gunicorn
